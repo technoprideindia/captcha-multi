@@ -14,7 +14,7 @@ app.use(function(err, req, res, next) {
         concurrency: Cluster.CONCURRENCY_CONTEXT,
         maxConcurrency: 10,
         puppeteerOptions: {
-            headless: false
+            headless: true
         }
     });
     await cluster.task(async ({ page, data: url }) => {
